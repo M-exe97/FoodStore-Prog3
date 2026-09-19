@@ -1,15 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Food Store - Catalogo</title>
+    <link rel="stylesheet" href="./home.css" />
 </head>
 
 <body>
-    <h1>Hola desde el cliente</h1>
-    <button id="logoutButton">Logout</button>
+    <header class="header-nav">
+        <h1>Food Store</h1>
+        <nav class="header-links">
+            <a href="./home.html">Catalogo</a>
+            <a href="../cart/cart.html">Carrito <span id="cart-counter" class="cart">0</span></a>
+        </nav>
+    </header>
+
+    <div class="store-layout">
+        <aside class="sidebar">
+            <h2>Categorias</h2>
+            <ul id="categories-container" class="categories-list">
+                <li>
+                    <button class="category-btn active" data-category-id="all">Todas las categorias</button>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="catalog-main">
+            <input
+                type="search"
+                id="search-input"
+                class="search-bar"
+                placeholder="Buscar productos"
+            />
+
+            <div class="catalog-header-info">
+                <span id="category-title">Todas las categorias</span>
+                <span id="products-count"></span>
+            </div>
+
+            <div id="products-container" class="products-grid"></div>
+        </main>
+    </div>
+
+    <div id="mensaje-aviso" class="mensaje-aviso"></div>
+
     <script type="module" src="./home.ts"></script>
 </body>
 

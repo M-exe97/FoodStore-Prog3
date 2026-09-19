@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store - Mi Carrito</title>
+    <link rel="stylesheet" href="./cart.css"/>
+</head>
+<body>
+    <header class="header-nav">
+        <h1>Food Store</h1>
+        <nav class="header-links">
+            <a href="../home/home.html">Catalogo</a>
+            <a href="./cart.html">Carrito <span id="cart-counter" class="cart-badge">0</span></a>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <h2 class="cart-title">Mi Carrito</h2>
+        <div id="empty-cart-view" class="empty-cart" style="display: none;">
+            <p>Tu carrito esta vacio</p>
+            <a href="../home/home.html" class="btn-catalog">Ver catalogo</a>
+        </div>
+
+        <div id="cart-content-view" class="cart-grid">
+            <section id="cart-items-list" class="cart-items"></section>
+            <aside class="cart-resumen">
+                <h3>Resumen</h3>
+                <div class="resumen-row">
+                    <span>Subtotal</span>
+                    <span id="resumen-subtotal">$ 0</span>
+                </div>
+                <div class="resumen-row total-row">
+                    <span>Total</span>
+                    <span id="resumen-total">$ 0</span>
+                </div>
+
+                <button class="btn-checkout" disabled>Finalizar compra</button>
+                <p class="checkout-notice">El checkout no esta disponible en esta version</p>
+                
+                <button id="btn-clear-cart" class="btn-clear">Vaciar carrito</button>
+            </aside>
+        </div>
+    </main>
+
+    <script type="module" src="./cart.ts"></script>
+</body>
+</html>
